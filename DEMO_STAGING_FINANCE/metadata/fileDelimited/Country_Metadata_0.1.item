@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.record="http:///orgomg/cwm/resource/record.ecore">
+  <TalendMetadata:DelimitedFileConnection xmi:id="_ZU7PQD73EeuvYq_HfnUsAg" name="Country_Metadata" dataPackage="_ZU7PQT73EeuvYq_HfnUsAg" Server="Localhost 127.0.0.1" FilePath="C:/Talend/TOS_DI-Win32-20200219_1130-V7.3.1/data_file/Banking/CSV/Country.csv" Format="WINDOWS" Encoding="UTF-8" FieldSeparatorValue="&quot;,&quot;" RowSeparatorValue="&quot;\n&quot;" UseHeader="true" HeaderValue="1" FirstLineCaption="true" EscapeType="CSV" CsvOption="true" FieldSeparatorType="Comma"/>
+  <orgomg.cwm.resource.record:RecordFile xmi:id="_ZU7PQT73EeuvYq_HfnUsAg" name="default" dataManager="_ZU7PQD73EeuvYq_HfnUsAg">
+    <ownedElement xsi:type="TalendMetadata:MetadataTable" xmi:id="_ZU7PQj73EeuvYq_HfnUsAg" id="_UaNowD73EeuvYq_HfnUsAg" label="metadata">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_ZU7PQz73EeuvYq_HfnUsAg" label="country_id" length="2" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_ZU7PRD73EeuvYq_HfnUsAg" label="name" length="36" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+    </ownedElement>
+  </orgomg.cwm.resource.record:RecordFile>
+</xmi:XMI>

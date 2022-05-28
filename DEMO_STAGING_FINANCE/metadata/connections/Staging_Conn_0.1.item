@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.relational="http:///orgomg/cwm/resource/relational.ecore">
+  <TalendMetadata:DatabaseConnection xmi:id="_s4rbMD7VEeuvYq_HfnUsAg" name="Staging_Conn" id="_mlYRID7VEeuvYq_HfnUsAg" label="Staging_Conn" dataPackage="_s-Rs4D7VEeuvYq_HfnUsAg" DatabaseType="Teradata" DriverClass="com.teradata.jdbc.TeraDriver" URL="jdbc:teradata://192.168.197.128/DATABASE=talend," Port="" Username="talend" Password="enc:system.encryption.key.v1:MVIOpgSn0mpUOqCQVc4RR4zaXqOBmfKlb/ZTZbc6FGfdq8R4" ServerName="192.168.197.128" DatasourceName="" FileFieldName="" SID="talend" SqlSynthax="" StringQuote="" NullChar="" DbmsId="teradata_id" ProductId="TERADATA" AdditionalParams="" StandardSQL="true" SQLMode="false" UiSchema="">
+    <taggedValue xmi:id="_s4spUD7VEeuvYq_HfnUsAg" tag="Is Conn Need Reload" value="false"/>
+    <taggedValue xmi:id="_s5IuMD7VEeuvYq_HfnUsAg" tag="package filter" value=""/>
+    <taggedValue xmi:id="_s5Pb4D7VEeuvYq_HfnUsAg" tag="Status" value=""/>
+    <taggedValue xmi:id="_s5Pb4T7VEeuvYq_HfnUsAg" tag="Version" value="0.1"/>
+    <taggedValue xmi:id="_s5Pb4j7VEeuvYq_HfnUsAg" tag="Purpose" value=""/>
+    <taggedValue xmi:id="_s5Pb4z7VEeuvYq_HfnUsAg" tag="Description" value=""/>
+    <taggedValue xmi:id="_s5Pb5D7VEeuvYq_HfnUsAg" tag="Author" value=""/>
+    <taggedValue xmi:id="_s5Pb5T7VEeuvYq_HfnUsAg" tag="otherParameter"/>
+    <taggedValue xmi:id="_s7Yw8D7VEeuvYq_HfnUsAg" tag="DB ProductName" value="Teradata"/>
+    <taggedValue xmi:id="_s7Yw8T7VEeuvYq_HfnUsAg" tag="DB ProductVersion" value="Teradata Database 16.20.32.23"/>
+    <taggedValue xmi:id="_s7Yw8j7VEeuvYq_HfnUsAg" tag="DB IdentifierQuoteString" value="&quot;"/>
+    <parameters xmi:id="_s4spUT7VEeuvYq_HfnUsAg" key="CONN_PARA_KEY_USERNAME" value="talend"/>
+  </TalendMetadata:DatabaseConnection>
+  <orgomg.cwm.resource.relational:Schema xmi:id="_s-Rs4D7VEeuvYq_HfnUsAg" name="Talend" dataManager="_s4rbMD7VEeuvYq_HfnUsAg"/>
+</xmi:XMI>

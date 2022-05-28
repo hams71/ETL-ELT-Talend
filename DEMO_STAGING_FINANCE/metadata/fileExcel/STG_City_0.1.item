@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.record="http:///orgomg/cwm/resource/record.ecore">
+  <TalendMetadata:FileExcelConnection xmi:id="_sBjYwUkDEeusa9V3fgxaJg" name="STG_City" dataPackage="_sBjYwkkDEeusa9V3fgxaJg" Server="Localhost 127.0.0.1" FilePath="C:/Talend/TOS_DI-Win32-20200219_1130-V7.3.1/data_file/Banking/New_Banking_Data/STG_city.xlsx" Encoding="UTF-8" UseHeader="true" HeaderValue="1" FirstLineCaption="true" SheetName="city" firstColumn="1" thousandSeparator="','" decimalSeparator="'.'" selectAllSheets="true" sheetList="city:w&#xA;">
+    <sheetColumns>A</sheetColumns>
+    <sheetColumns>B</sheetColumns>
+    <sheetColumns>C</sheetColumns>
+  </TalendMetadata:FileExcelConnection>
+  <orgomg.cwm.resource.record:RecordFile xmi:id="_sBjYwkkDEeusa9V3fgxaJg" name="default" dataManager="_sBjYwUkDEeusa9V3fgxaJg">
+    <ownedElement xsi:type="TalendMetadata:MetadataTable" xmi:id="_sBjYw0kDEeusa9V3fgxaJg" id="_lf-iIEkDEeusa9V3fgxaJg" label="metadata">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_sBjYxEkDEeusa9V3fgxaJg" label="Country_ID" length="50" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_sBjYxUkDEeusa9V3fgxaJg" label="City_ID" length="50" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_sBjYxkkDEeusa9V3fgxaJg" label="Name" length="50" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+    </ownedElement>
+  </orgomg.cwm.resource.record:RecordFile>
+</xmi:XMI>

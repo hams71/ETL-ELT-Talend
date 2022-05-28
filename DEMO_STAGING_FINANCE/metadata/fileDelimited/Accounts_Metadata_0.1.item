@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.record="http:///orgomg/cwm/resource/record.ecore">
+  <TalendMetadata:DelimitedFileConnection xmi:id="_k6if8D7VEeuvYq_HfnUsAg" name="Accounts_Metadata" id="_k6bLMD7VEeuvYq_HfnUsAg" dataPackage="_k6nYcD7VEeuvYq_HfnUsAg" Server="Localhost 127.0.0.1" FilePath="C:/Talend/TOS_DI-Win32-20200219_1130-V7.3.1/data_file/Banking/CSV/Accounts.csv" Format="WINDOWS" Encoding="US-ASCII" FieldSeparatorValue="&quot;,&quot;" RowSeparatorValue="&quot;\n&quot;" UseHeader="true" HeaderValue="1" FooterValue="0" LimitValue="" FirstLineCaption="true" EscapeType="CSV" EscapeChar="&quot;\&quot;&quot;" TextEnclosure="&quot;\&quot;&quot;" CsvOption="true" FieldSeparatorType="Comma"/>
+  <orgomg.cwm.resource.record:RecordFile xmi:id="_k6nYcD7VEeuvYq_HfnUsAg" name="default" dataManager="_k6if8D7VEeuvYq_HfnUsAg">
+    <ownedElement xsi:type="TalendMetadata:MetadataTable" xmi:id="_k6nYcT7VEeuvYq_HfnUsAg" id="_Y8eygD7VEeuvYq_HfnUsAg" label="metadata">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_k6nYcj7VEeuvYq_HfnUsAg" label="Account_ID" length="-1" talendType="id_String" nullable="false" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_k6nYcz7VEeuvYq_HfnUsAg" label="accountCategoryCode" length="16" talendType="id_String" nullable="false" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_k6nYdD7VEeuvYq_HfnUsAg" label="customerTypeCode" length="22" talendType="id_String" nullable="false" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_k6nYdT7VEeuvYq_HfnUsAg" label="industryCode" length="-1" talendType="id_String" nullable="false" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_k6nYdj7VEeuvYq_HfnUsAg" label="primaryContactId" length="-1" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_k6nYdz7VEeuvYq_HfnUsAg" label="accountNumber" length="37" talendType="id_String" nullable="false" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_k6nYeD7VEeuvYq_HfnUsAg" label="name" length="19" talendType="id_String" nullable="false" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_k6nYeT7VEeuvYq_HfnUsAg" label="revenue" length="6" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_k6nYej7VEeuvYq_HfnUsAg" label="stateCode" length="8" talendType="id_String" nullable="false" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_k6nYez7VEeuvYq_HfnUsAg" label="account_start_dt" length="10" talendType="id_String" nullable="false" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_k6nYfD7VEeuvYq_HfnUsAg" label="Account_end_dt" length="10" talendType="id_String" nullable="false" pattern="&quot;dd-MM-yyyy&quot;"/>
+    </ownedElement>
+  </orgomg.cwm.resource.record:RecordFile>
+</xmi:XMI>
