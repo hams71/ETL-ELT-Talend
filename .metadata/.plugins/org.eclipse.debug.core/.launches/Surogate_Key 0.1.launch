@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<launchConfiguration type="org.talend.designer.runprocess.jobLaunchConfiguration">
-<stringAttribute key="CURRENT_PROJECT_NAME" value="Slowly_Changing_Dimensions"/>
-<stringAttribute key="JOB_PROJECT_TECH_LABEL" value="SLOWLY_CHANGING_DIMENSIONS"/>
-<stringAttribute key="TALEND_JOB_ID" value="_U0BnYEjxEeuq9u4DA_T_Rg"/>
-<stringAttribute key="TALEND_JOB_NAME" value="Surogate_Key"/>
-<stringAttribute key="TALEND_JOB_VERSION" value="0.1"/>
-</launchConfiguration>

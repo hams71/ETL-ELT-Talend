@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
-<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="demo_staging_finance.copy_of_contact_iud_ldr_core_scd_2_checking_0_1.Copy_of_Contact_IUD_LDR_CORE_SCD_2_CHECKING"/>
-<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="--context=Default --stat_port=3530 "/>
-<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="DEMO_STAGING_FINANCE_COPY_OF_CONTACT_IUD_LDR_CORE_SCD_2_CHECKING_0.1"/>
-<booleanAttribute key="org.eclipse.jdt.launching.STOP_IN_MAIN" value="true"/>
-<stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Dencryption.keys.file=/C:/Talend/TOS_DI-Win32-20200219_1130-V7.3.1/configuration/studio.keys"/>
-</launchConfiguration>
