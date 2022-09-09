@@ -69,7 +69,6 @@
 </p>
 
 - The source system provides the Full Dump (all of the data).
-- No Delta data was provided meaning only the data that changed in the source system is provided to us.
 - The Transactions table is append only data.
 - Most the tables were SCD Type 1 or Type 2.
 - Country and City do not change much they can be loaded manually whenever needed.
