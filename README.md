@@ -40,8 +40,9 @@
 ### Program Flow
 
 <p align="center">
-  <img src="Images/Flow.jpg" width="850" >
+  <img src="Images/Flow_1.jpg" width="850" >
 </p>
+
 
 
 
@@ -49,12 +50,43 @@
 
 ### Architecture and Design
 
-- Now on to the interesting part. Firstly we need to create a Landing Zone where our data files will be pushed. This process was automated and Talend will wait for the files to appear and then will start the next step.
-- In Talend we needed to provide our file schema in the metadata section so that it knows what will be the format.
-- After the data has arrived we need to clear our staging area (truncate and load) and load this data into our Staging Area.
-- When the data in our staging area it is not in its purest form, from now we load this data to our help tables which will be used to generate the surogate keys, these are the keys used internally by the warehouse.
-- Will do a join and see based on our keys if the staging data is present in the core layers. If its not we will load this data to our Load Ready Layer.
-- The Load Ready layer is really interesting here we mark our rows that either they will be Inserted, Updated or Deleted (IUD). So this will have a column which will tell us what operation needs to be performed.
-- When we have this IUD marked data in our Load Ready Layer, based on our marking we can load this data to our Core/Dim Layer.
-- In our Core Layer we will be implementing SCDs, now that will be based on our use case that what sort of details we can to capture.
-- Now in our core layer will be do the indexing so that based on keys we can find data efficiently and similarly will collect statistics as well. Teradata also provides us to have different join indexes which are really helpful in the Fact and Dim situation. 
+- Now on to the interesting part. Firstly we needed to create a **Landing Zone** where our data files will be placed. This process was automated and Talend will wait for the files to appear and then will start the next step. 
+- In Talend we needed to provide our file schema in the metadata section so that it knows what will be the format of the different files.
+- After the data has arrived we need to clear our **Staging Area** (truncate and load) and load this data into our Staging Area. The Staging Area is the first place where our data is loaded. Our data files will be loaded to different tables in our Staging Area.
+- When the data is in our Staging Area it is not in its purest form, from here do some transformation and load this data to our **Help Tables** which will be used to generate the surrogate keys, these are the keys used internally by the warehouse.
+- Will do a join and see based on our keys if the Staging data is present in the **Core/Dim** tables. If its not we will load this data to our **Load Ready** tables.
+- The Load Ready tables are really interesting here we mark our rows that either they will be Inserted, Updated or Deleted (IUD). So this will have a column which will tell us what operation needs to be performed and hence the name IUD column.
+- When we have this IUD marked data in our Load Ready tables, based on our marking we can load this data to our Core/Dim tables.
+- In our Core tables we will be implementing SCDs, now that will be based on our use case that what sort of details we can to capture.
+- In Core tables will do the indexing so that based on keys we can find data efficiently and similarly will collect statistics as well. Teradata also provides us with different join indexes which are really helpful in the Fact and Dim situation.
+
+---
+
+### Data Model
+
+
+<p align="center">
+  <img src="Images/PDM.PNG" width="850" >
+</p>
+
+- The source system provides the Full Dump (all of the data).
+- No Delta data was provided meaning only the data that changed in the source system is provided to us.
+- The Transactions table is append only data.
+- Most the tables were SCD Type 1 or Type 2.
+- Country and City do not change much they can be loaded manually whenever needed.
+
+---
+
+### SMX Document
+
+<p align="center">
+  <img src="Images/Mapping.PNG" width="850" >
+</p>
+
+- An excel sheet was also created which explains what operation performed.
+- Each of the table will have a detailed sheet which tells what tranformations happened, at what layer(Staging, Load Ready, Core/Dim).
+- This is really helpful for other team member so see and interpret what happened.
+
+
+---
+
