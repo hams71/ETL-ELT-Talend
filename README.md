@@ -11,8 +11,7 @@
 - [Data Model](#data-model)
 - [SMX Document](#smx-document)
 - [ETL Jobs](#etl-jobs)
-- [Indexes](#indexed)
-- [Statistics Collection](#statistics-collection)
+- [Indexes and Statistics Collection](#indexes-and-statistics-collection)
 - [Tools and Technologies](#tools-and-technologies)
 
 ---
@@ -90,3 +89,43 @@
 
 ---
 
+
+### ETL Jobs
+
+- The first time the user will place the files in the Landing area and Talend will start the job.
+- It will truncate all the data if any in the Staging Tables (Contact, Account, Transaction etc) and will load this new data into the respective tables.
+- After this we will populate our Help Tables with the Surogate keys and will be used in the next layers.
+- Using the Help Tables and Staging we will check this with Core/Dim that what data is new, or updated, or has been deleted and will load and mark this new data in our Load Ready Tables.
+- Once the data is in the Load Ready, based on the IUD column marking we will load this data into our Core tables.
+- The Core tables will have the SCDs implemented and based on that either the rows will be updated or new row will be inserted.
+- Statistics will collected on these tables and indexed will be created so that data can be used efficiently by end user.
+- The data file in our Landing area will be archived.
+- Next day again new data arrives and this cycle will start again.
+
+
+---
+
+### Indexes and Statistics Collection
+
+- Teradata provides many types of indexed
+  - Unique Primary Index (UPI)
+  - NON Unique Primary Index (NUPI)
+  - Secondary Index (SI)
+  - Non Unique Secondary Index (NUSI)
+
+- Teradata also provides Join Indexes the result of these are stored and if any changes will be reflected in these join indexed as well
+  - Single Table Join Index
+  - Multiple Table Join Index
+  - Aggregated Join Index
+
+- After the data is loaded in the Core/Dim Tables we collect Statistics as well on different columns and the optimizer creates an execution strategy that is based on these statistics.
+
+
+---
+### Tools and Technologies
+
+- Teradata 16.20
+- Talend
+- Java
+- SqlDBM
+- Excel
