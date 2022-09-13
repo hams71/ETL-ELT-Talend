@@ -19,27 +19,28 @@
 
 ### Overview
 
-- This was project to show how talend can be used to load to teradata and how teradata warehouse can use different indexes, stattistics collection to provide value to end user in an efficient manner.
-- Talend was used as the tool of choice to perform this task. It can be downloaded easily. 
-- Needed to design a data model for the banking industry.
-- Needed to create an ETL pipeline using Talend so that the task can be automated and data can be loaded with minimum manual effort.
+- This project showed how Talend Open Studio can be used to load to teradata and how teradata warehouse can use different indexes, stattistics collection to provide value to end user. 
+- Data model for the banking industry was designed. 
+- ETL pipeline using Talend was created so that the task can be automated and data can be loaded with minimum manual effort.
 
 ---
 
 ### Talend Open Studio
 
-- Download the free version of Talend.
-- Installed Teradata required jars so that Talend can connect to Teradata.
-- Talend has a great UI, pre build components that can be used for different use cases.
-- Talend being a java based tool you will need to have all the java requirements checked like jvm, jdk.
-- While running jobs it also provides real time statistics which is really helpful.
+- Download the free version of Talend Open Studio V7.3.1.
+- Installed Teradata required jars so that Talend can connect to Teradata. These jars can be downloaded from Teradata websites.
+  - tdgssconfig.jar
+  - terajdbc4.jar
+- Talend provides a great UI, pre build components that can be used for different use cases.
+- Talend being a java based tool you will need to have all the java requirements checked jvm, jdk.
+- While running jobs it also provides real time statistics.
 
 ---
 
 ### Program Flow
 
 <p align="center">
-  <img src="Images/Flow_1.jpg" width="850" >
+  <img src="Images/Flow_2.jpg" width="850" >
 </p>
 
 
@@ -48,16 +49,31 @@
 ---
 
 ### Architecture and Design
-
-- Now on to the interesting part. Firstly we needed to create a **Landing Zone** where our data files will be placed. This process was automated and Talend will wait for the files to appear and then will start the next step. 
-- In Talend we needed to provide our file schema in the metadata section so that it knows what will be the format of the different files.
-- After the data has arrived we need to clear our **Staging Area** (truncate and load) and load this data into our Staging Area. The Staging Area is the first place where our data is loaded. Our data files will be loaded to different tables in our Staging Area.
+---
+- Now on to the interesting part. Firstly we needed to create a **Landing Zone** where our data files will be placed. This process was automated and Talend will wait for the files to appear and then will start the next processes. 
+---
+- In Talend we needed to provide our file schema in the metadata section.So, that it know what will be the format of the different files.
+---
+- Now will load the flat file to our **Staging Area/Staging Tables**.
+  - Truncate and Load will happen. If any data exists that will be removed first and new data will be loaded.
+  - The Staging Area is the first place where our data is loaded.
+---
 - When the data is in our Staging Area it is not in its purest form, from here do some transformation and load this data to our **Help Tables** which will be used to generate the surrogate keys, these are the keys used internally by the warehouse.
-- Will do a join and see based on our keys if the Staging data is present in the **Core/Dim** tables. If its not we will load this data to our **Load Ready** tables.
-- The Load Ready tables are really interesting here we mark our rows that either they will be Inserted, Updated or Deleted (IUD). So this will have a column which will tell us what operation needs to be performed and hence the name IUD column.
-- When we have this IUD marked data in our Load Ready tables, based on our marking we can load this data to our Core/Dim tables.
+---
+- The data from Staging Table and Help Table will be joined and loaded to the **Load Ready Tables**. 
+  - These Load Ready Tables will have an extra column named as IUD (Insert, Update, Delete).
+  - Based on the value in the column we will perform the operation and load to Core/Dim Tables.
+  - The IUD marking will be empty for now.
+---
+- Now the **Load Ready Tables** will be checked with the respective **Core/Dim Tables** and the IUD marking will be performed. 
+  - Lets take an example Id 1 does not exist in Core Table but exists in Load Ready Table, in Load ready this will be marked as I (Insert).
+  - The Id 1 exists in both Load Ready Table and Core Table but lets say the address of the person changed can it will be marked as U (Update). Now update type can be of SCD-1, 2 or 3 this depends on the use case.
+  - The Id 1 exists in Core table but is not present in Load Ready Table, in this case it will be marked as D (Delete).
+---   
 - In our Core tables we will be implementing SCDs, now that will be based on our use case that what sort of details we can to capture.
+---
 - In Core tables will do the indexing so that based on keys we can find data efficiently and similarly will collect statistics as well. Teradata also provides us with different join indexes which are really helpful in the Fact and Dim situation.
+
 
 ---
 
@@ -81,7 +97,7 @@
   <img src="Images/Mapping.PNG" width="850" >
 </p>
 
-- An excel sheet was also created which explains what operation performed.
+- An excel sheet was also created which explains what operations performed.
 - Each of the table will have a detailed sheet which tells what tranformations happened, at what layer(Staging, Load Ready, Core/Dim).
 - This is really helpful for other team member so see and interpret what happened.
 
@@ -100,6 +116,10 @@
 - Statistics will collected on these tables and indexed will be created so that data can be used efficiently by end user.
 - The data file in our Landing area will be archived.
 - Next day again new data arrives and this cycle will start again.
+
+<p align="center">
+  <img src="Images/Arch.jpg" width="850" >
+</p>
 
 
 ---
