@@ -19,9 +19,10 @@
 
 ### Overview
 
-- This project showed how Talend Open Studio can be used to load to teradata and how teradata warehouse can use different indexes, stattistics collection to provide value to end user. 
+- This project showed how Talend Open Studio can be used to load to teradata and how teradata warehouse can use different indexes, statistics collection to provide value to end user. 
 - Data model for the banking industry was designed. 
 - ETL pipeline using Talend was created so that the task can be automated and data can be loaded with minimum manual effort.
+- The program waits for the files to land in a certain folder and then the whole process starts and in the end the data is in tables and the files are moved to archive folder.
 
 ---
 
