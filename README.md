@@ -1,4 +1,6 @@
-# ETL-ELT-Talend
+# ETL-ELT-Talend 
+
+Teradata and Talend Open Studio were used together for this ETL project.
 
 ---
 
