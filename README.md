@@ -21,7 +21,7 @@ Teradata and Talend Open Studio were used together for this ETL project.
 
 ### Overview
 
-- This project showed how Talend Open Studio can be used to load to Teradata and how can use different indexes, statistics collection to provide value to end user. 
+- This project showed how Talend Open Studio can be used to load to Teradata and how we can use different indexes, statistics collection to provide value to end user. 
 - Data model for the banking industry was designed. 
 - ETL pipeline using Talend was designed so that the task can be automated and data can be loaded with minimum manual effort.
 - The program waits for the files to land in a certain folder and then the whole process starts and in the end the data is in tables and the files are moved to archive folder.
@@ -58,7 +58,7 @@ Teradata and Talend Open Studio were used together for this ETL project.
 - Now will load the flat file to our **Staging Area/Staging Tables**.
   - Truncate and Load will happen. If any data exists that will be removed first and new data will be loaded.
   - The Staging Area is the first place where our data is loaded.
-- When the data is in our Staging Area it is not in its purest form, from here do some transformation and load this data to our **Help Tables** which will be used to generate the surrogate keys, these are the keys used internally by the warehouse.
+- When the data is in our Staging Area it is not in its purest form, from here do some transformations and load this data to our **Help Tables** which will be used to generate the surrogate keys, these are the keys used internally by the warehouse.
 - The data from Staging Table and Help Table will be joined and loaded to the **Load Ready Tables**. 
   - These Load Ready Tables will have an extra column named as IUD (Insert, Update, Delete).
   - Based on the value in the column we will perform the operation and load to Core/Dim Tables.
